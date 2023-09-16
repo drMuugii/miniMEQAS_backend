@@ -29,7 +29,7 @@ export class ProgramUser extends Model {
 
   @Column
   @ForeignKey(() => Instrument)
-  instrumeld: string;
+  InstrumentId: string;
   @BelongsTo(() => Instrument)
   Instrument: Instrument;
 

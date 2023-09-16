@@ -1,10 +1,4 @@
-import {
-  Column,
-  ForeignKey,
-  HasMany,
-  Model,
-  Table,
-} from 'sequelize-typescript';
+import { Column, HasMany, Model, Table } from 'sequelize-typescript';
 import { Instrument } from 'src/resource/instrument/model/instrument.model';
 
 @Table
