@@ -8,7 +8,7 @@ import {
 
 import { Instrument } from 'src/resource/instrument/model/instrument.model';
 import { Program } from './program.model';
-import { User } from 'src/resource/user/models/user.model';
+import { Participant } from 'src/resource/participant/models/participant.model';
 
 @Table
 export class ProgramUser extends Model {
@@ -19,13 +19,13 @@ export class ProgramUser extends Model {
   @ForeignKey(() => Program)
   programId: string;
   @BelongsTo(() => Program)
-  Program: Program;
+  Program: Program; 
 
   @Column
-  @ForeignKey(() => User)
-  userId: string;
-  @BelongsTo(() => User)
-  User: User;
+  @ForeignKey(() => Participant)
+  participantId: string;
+  @BelongsTo(() => Participant)
+  Participant: Participant;
 
   @Column
   @ForeignKey(() => Instrument)

@@ -2,11 +2,11 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { UserModule } from './resource/user/user.module';
+import { ParticipantModule } from './resource/participant/participant.module';
 import { ProgramModule } from './resource/program/program.module';
 import { ResultModule } from './resource/result/result.module';
 import { InstrumentModule } from './resource/instrument/instrument.module';
-import { User } from './resource/user/models/user.model';
+import { Participant } from './resource/participant/models/participant.model';
 import { Program } from './resource/program/models/program.model';
 import { Instrument } from './resource/instrument/model/instrument.model';
 import { ProgramUser } from './resource/program/models/program_user.model';
@@ -26,7 +26,7 @@ import { ResultSummary } from './resource/result/models/result_summary.model';
       autoLoadModels: true,
       synchronize: true,
       models: [
-        User,
+        Participant,
         Program,
         ProgramUser,
         Instrument,
@@ -35,7 +35,7 @@ import { ResultSummary } from './resource/result/models/result_summary.model';
         ResultSummary,
       ],
     }),
-    UserModule,
+    ParticipantModule,
     ProgramModule,
     ResultModule,
     InstrumentModule,

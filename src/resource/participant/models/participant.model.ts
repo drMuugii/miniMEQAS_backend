@@ -2,15 +2,15 @@ import { Column, HasMany, Model, Table } from 'sequelize-typescript';
 import { Instrument } from 'src/resource/instrument/model/instrument.model';
 
 @Table
-export class User extends Model {
+export class Participant extends Model {
   @Column({ primaryKey: true })
   id: string;
   @Column
-  userId: string;
+  participantId: string;
   @Column
-  userName: string;
+  participantName: string;
   @Column
-  userType: string;
+  participanttype: string;
   @Column
   contactPerson: string;
   @Column

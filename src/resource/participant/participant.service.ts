@@ -1,13 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { User } from './models/user.model';
+import { Participant } from './models/participant.model';
 import { Instrument } from '../instrument/model/instrument.model';
 
 @Injectable()
-export class UserService {
-  constructor(@InjectModel(User) private userModel: typeof User) {}
-  getUser(): any {
-    return this.userModel.findAll({
+export class ParticipantService {
+  constructor(@InjectModel(Participant) private participantModel: typeof Participant) {}
+  getParticipant(): any {
+    return this.participantModel.findAll({
       include: [
         {
           model: Instrument,

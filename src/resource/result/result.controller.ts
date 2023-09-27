@@ -6,7 +6,7 @@ import { ApiTags } from '@nestjs/swagger';
 @ApiTags('result')
 export class ResultController {
   constructor(private readonly ResultService: ResultService) {}
-  @Get('sss')
+  @Get('test')
   getHello(): string {
     return this.ResultService.getHello();
   }

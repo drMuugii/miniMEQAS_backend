@@ -1,6 +1,6 @@
 import { Column, ForeignKey, Model, Table } from 'sequelize-typescript';
 import { InstrumentModel } from './instrument_model.model';
-import { User } from 'src/resource/user/models/user.model';
+import { Participant } from 'src/resource/participant/models/participant.model';
 
 @Table
 export class Instrument extends Model {
@@ -12,8 +12,8 @@ export class Instrument extends Model {
   active: boolean;
   @Column
   @ForeignKey(() => InstrumentModel)
-  InstrumentModelId: string;
+  instrumentModelId: string;
   @Column
-  @ForeignKey(() => User)
-  UserId: string;
+  @ForeignKey(() => Participant)
+  participantId: string;
 }
