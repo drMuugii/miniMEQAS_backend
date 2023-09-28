@@ -4,10 +4,9 @@ import { ApiTags } from '@nestjs/swagger';
 @ApiTags('participant')
 @Controller('participant')
 export class ParticipantController {
-  ParticipantService: any;
-  constructor(private readonly UserService: ParticipantService) {}
+  constructor(private readonly ParticipantService: ParticipantService) {}
   @Get()
-  getUser(): any {
+  getParticipant(): any {
     return this.ParticipantService.getParticipant();
   }
 }

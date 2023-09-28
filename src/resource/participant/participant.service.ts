@@ -5,7 +5,9 @@ import { Instrument } from '../instrument/model/instrument.model';
 
 @Injectable()
 export class ParticipantService {
-  constructor(@InjectModel(Participant) private participantModel: typeof Participant) {}
+  constructor(
+    @InjectModel(Participant) private participantModel: typeof Participant,
+  ) {}
   getParticipant(): any {
     return this.participantModel.findAll({
       include: [

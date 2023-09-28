@@ -13,7 +13,4 @@ export class Instrument extends Model {
   @Column
   @ForeignKey(() => InstrumentModel)
   instrumentModelId: string;
-  @Column
-  @ForeignKey(() => Participant)
-  participantId: string;
 }

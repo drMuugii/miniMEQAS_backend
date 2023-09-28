@@ -17,6 +17,4 @@ export class Participant extends Model {
   phone: number;
   @Column
   email: string;
-  @HasMany(() => Instrument)
-  Instruments: Instrument[];
 }
